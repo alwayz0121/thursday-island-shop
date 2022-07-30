@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Gowun Batang";
+  src: url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+
+.App {
+  font-family: "Gowun Batang", serif;
+}
+
+/*fade-in 애니메이션 만들기*/
+.start {
+  opacity: 0;
+}
+.end {
+  opacity: 1;
+  transition: all 0.5s;
+}

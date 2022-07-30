@@ -1,0 +1,83 @@
+.cart-item {
+  padding: 20px;
+  height: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.cart-item .image {
+  margin-right: 40px;
+}
+
+.cart-item .image img {
+  height: 100%;
+  width: 130px;
+}
+
+.cart-item .descrption {
+  padding-top: 20px;
+  margin-right: 100px;
+  width: 250px;
+}
+
+.cart-item .descrption span {
+  display: block;
+  font-size: 25px;
+  width: 100px;
+  font-weight: 400;
+}
+
+.cart-item .quantity {
+  margin: 20px 0px 30px;
+}
+
+.cart-item .quantity button[class*="btn"] {
+  width: 30px;
+  height: 30px;
+  color: #444;
+  background-color: #eee;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-item .quantity input {
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #444;
+}
+
+.cart-item .descrption .quantity input {
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #444;
+  font-weight: 300;
+}
+
+.cart-item .final-price {
+  width: 100px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.cart-item .buttons {
+  position: absolute;
+  top: auto;
+  right: 20px;
+  background-color: #ccc;
+  color: #eee;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.cart-item .buttons:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

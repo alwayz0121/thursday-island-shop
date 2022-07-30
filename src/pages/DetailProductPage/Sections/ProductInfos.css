@@ -1,0 +1,53 @@
+.detail-title {
+  margin-bottom: 20px;
+}
+
+.detail-quantity {
+  padding: 10px 0px;
+  margin: 0px 60px 10px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.detail-quantity p {
+  width: 100px;
+}
+
+.detail-quantity button[class*="btn"] {
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.detail-quantity input {
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #444;
+}
+
+.detail-price {
+  margin: 0px 0px 40px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.product-info-action {
+  background-color: #444;
+  color: #eee;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 10px;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.product-info-action:hover {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+}
