@@ -1,6 +1,9 @@
 ## 리액트로 만든 쇼핑몰
 
+[직접 만든 Thursday Island 쇼핑몰 바로가기](https://zippy-kitten-1a798c.netlify.app)
+
 React를 이용한 쇼핑몰 사이트입니다.
+(제가 좋아하는 Thursday Island 브랜드의 쇼핑몰을 재구성했습니다.)
 <br> <br>
 
 ---
