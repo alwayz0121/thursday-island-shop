@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import "./LookBookPage.css";
 
 function LookBookPage() {
   let [fadepage, setFadepage] = useState("");
@@ -27,7 +27,6 @@ function LookBookPage() {
   let [lookBook, setLookBook] = useState(lookBookData);
   let [btnClick, setBtnClick] = useState(1);
   let [loadingDisplay, setLoadingDisplay] = useState(false);
-  let navigate = useNavigate();
 
   useEffect(() => {
     setFadepage("end");
@@ -37,8 +36,10 @@ function LookBookPage() {
   }, []);
 
   return (
-    <div className={`pageWrapper start ${fadepage}`}>
-      <h2 className="main-title">LookBook</h2>
+    <div className={`start ${fadepage}`}>
+      <section className="welcome-lookbook"></section>
+
+      <h2 className="main-title">Look Book</h2>
       <div className="container">
         <div className="row">
           {lookBook.map((a, i) => {
@@ -78,20 +79,17 @@ function LookBookPage() {
 
 function Card({ lookBook }) {
   return (
-    <div className="col-md-4">
-      <img
-        src={
-          "https://alwayz0121.github.io/thursday_island_json/img/lookbook/lookbook" +
-          (lookBook.id + 1) +
-          ".jpg"
-        }
-        alt="lookbook"
-        style={{
-          width: "90%",
-          margin: "1.5rem",
-          boxShadow: "0px 0px 15px #333",
-        }}
-      />
+    <div className="col-md-4 col-sm-6">
+      <div className="lookbook-wrapper">
+        <img
+          src={
+            "https://alwayz0121.github.io/thursday_island_json/img/lookbook/lookbook" +
+            (lookBook.id + 1) +
+            ".jpg"
+          }
+          alt="lookbook"
+        />
+      </div>
     </div>
   );
 }
