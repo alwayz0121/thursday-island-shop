@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Gowun Batang";
-  src: url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+  src: url("https://fonts.googleapis.com/css?family=Nanum+Gothic:400");
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:400");
 
 .App {
-  font-family: "Gowun Batang", serif;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 /*fade-in 애니메이션 만들기*/
