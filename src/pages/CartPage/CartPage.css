@@ -8,13 +8,22 @@
   flex-direction: column;
 }
 
-.title {
+.shopping-cart-title {
   height: 60px;
   border-bottom: 1px solid #eee;
   padding: 20px;
   color: #555;
   font-size: 20px;
   font-weight: 400;
+}
+
+.shopping-cart-body {
+  min-height: 100px;
+}
+
+.shopping-cart-body p {
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .shopping-cart button {
@@ -27,7 +36,7 @@
   font-size: 13px;
 }
 
-.bottom {
+.shopping-cart-bottom {
   height: 80px;
   padding: 20px;
   color: #555;
@@ -42,4 +51,9 @@
   font-size: 20px;
   color: #555;
   font-weight: 400;
+}
+
+.shopping-cart-bottom button {
+  float: right;
+  padding: 4px 8px;
 }

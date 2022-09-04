@@ -51,13 +51,13 @@ function CartItem({ item, buttonHandler, index, deleteItemHandler }) {
           </button>
         </div>
 
-        <p className="final-price">{item.price.original.raw}원</p>
+        <p className="final-price">\ {item.price.sale.raw}</p>
       </div>
 
       <div className="buttons">
         <span
           className="delete-btn"
-          onClick={() => deleteItemHandler(item._id, item.price.original.raw)}
+          onClick={() => deleteItemHandler(item._id, item.price.sale.raw)}
         >
           X
         </span>
