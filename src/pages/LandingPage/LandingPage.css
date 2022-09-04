@@ -1,7 +1,8 @@
 /* welcome */
 .welcome {
   width: 100%;
-  height: 400px;
+  height: 35vw;
+  max-height: 400px;
   background-image: url("../../images/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,6 +10,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.welcome-top {
+  background-image: url("../../images/background.jpg");
+}
+
+.welcome-onepiece {
+  background-image: url("../../images/background2.jpg");
+}
+
+.welcome-bottom {
+  background-image: url("../../images/background.jpg");
 }
 
 .main-title {
@@ -21,9 +34,118 @@
 .sub-bg {
   margin-top: 10px;
   width: 100%;
-  height: 900px;
+  height: 45vw;
+  max-height: 800px;
   background-image: url(../../images/main.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+}
+
+/*movie*/
+.movie-wrapper {
+  height: 580px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-color: #fbfbfd;
+  text-align: center;
+  padding: 65px 20px;
+  margin-bottom: 10px;
+}
+
+.movie-subtitle {
+  font-size: 1.2rem;
+}
+
+.movie-title {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.movie-player {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.movie-player iframe {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  max-width: 560px;
+  max-height: 315px;
+}
+
+/*New Product*/
+.product-grid {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+.product-grid h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.grid-container {
+  width: 1070px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+.grid-product {
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  width: 100%;
+  position: relative;
+}
+.grid-product:hover {
+  background: #e1e1e1;
+}
+
+.grid-product a {
+  text-decoration: none;
+}
+
+.grid-product img {
+  width: 100%;
+}
+.grid-detail {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.grid-product:hover .grid-detail {
+  opacity: 1;
+}
+
+.grid-detail p {
+  color: #fff;
+  font-size: 0.9rem;
+  margin-top: 10px;
 }

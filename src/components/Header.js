@@ -12,7 +12,7 @@ function Header() {
   }, [isAuthenticated]);
 
   return (
-    <Navbar bg="light" variant="light">
+    <Navbar bg="light" variant="light" expand="lg">
       <Container>
         <Navbar.Brand
           onClick={() => {
@@ -21,47 +21,72 @@ function Header() {
         >
           Thursday Island
         </Navbar.Brand>
-        <Nav className="me-auto">
-          <Nav.Link
-            onClick={() => {
-              navigate("/lookbook");
-            }}
-          >
-            Look Book
-          </Nav.Link>
-        </Nav>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto ">
+            <Nav.Link
+              onClick={() => {
+                navigate("/lookbook");
+              }}
+            >
+              Look Book
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                navigate("/top");
+              }}
+            >
+              Top
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                navigate("/onepiece");
+              }}
+            >
+              One Piece
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                navigate("/bottom");
+              }}
+            >
+              Bottom
+            </Nav.Link>
+          </Nav>
 
-        <Nav className="ms-auto">
-          {isAuth ? (
-            <>
-              <Nav.Link onClick={signOut}>Logout</Nav.Link>
-              <Nav.Link
-                onClick={() => {
-                  navigate("/user/cart");
-                }}
-              >
-                Cart
-              </Nav.Link>
-            </>
-          ) : (
-            <>
-              <Nav.Link
-                onClick={() => {
-                  navigate("/login");
-                }}
-              >
-                Login
-              </Nav.Link>
-              <Nav.Link
-                onClick={() => {
-                  navigate("/login");
-                }}
-              >
-                Cart
-              </Nav.Link>
-            </>
-          )}
-        </Nav>
+          <Nav className="ms-auto">
+            {isAuth ? (
+              <>
+                {/* signOut 함수는 AuthContext에서 불러옴 */}
+                <Nav.Link onClick={signOut}>Logout</Nav.Link>
+                <Nav.Link
+                  onClick={() => {
+                    navigate("/user/cart");
+                  }}
+                >
+                  Cart
+                </Nav.Link>
+              </>
+            ) : (
+              <>
+                <Nav.Link
+                  onClick={() => {
+                    navigate("/login");
+                  }}
+                >
+                  Login
+                </Nav.Link>
+                <Nav.Link
+                  onClick={() => {
+                    navigate("/login");
+                  }}
+                >
+                  Cart
+                </Nav.Link>
+              </>
+            )}
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

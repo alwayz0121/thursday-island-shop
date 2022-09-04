@@ -7,6 +7,7 @@ import { AuthContext } from "./../../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 function ProductInfos({ item }) {
+  console.log(item);
   const navigate = useNavigate();
   const [count, setCount] = useState(1);
   const [shopAlert, setShopAlert] = useState(false);
@@ -38,9 +39,11 @@ function ProductInfos({ item }) {
     };
     //구매자 정보
     const options = {
+      //customer: '<customer-auth-token>' (localStorage에 저장해둠)
       customer: localStorage.getItem("accessToken"),
     };
 
+    //로그인 된 고객이 카트에 품목 추가 API) https://dev.clayful.io/ko/js/apis/cart/add-item-for-me
     Cart.addItemForMe(payload, options, function (err, result) {
       if (err) {
         console.log(err.code);
@@ -52,11 +55,11 @@ function ProductInfos({ item }) {
         setShopAlert(true);
         setTimeout(() => {
           setShopAlert(false);
-        }, 2000);
+        }, 3000);
       } else {
         setTimeout(() => {
           navigate("/user/cart");
-        }, 500);
+        }, 1000);
       }
     });
   };
@@ -65,14 +68,14 @@ function ProductInfos({ item }) {
     <>
       {shopAlert && (
         <Alert variant="info">
-          <Alert.Heading>쇼핑백에 담겼습니다.</Alert.Heading>
-          <p>쇼핑백에서 확인해주세요.</p>
+          <Alert.Heading>장바구니에 담겼습니다.</Alert.Heading>
+          <p>장바구니에서 확인해주세요.</p>
         </Alert>
       )}
 
       <div className="detail-title">
         <h2>{item.name}</h2>
-        <h5>{item.summary}</h5>
+        <h5>{item.keywords}</h5>
       </div>
       <div className="detail-quantity">
         <p>수량</p>
@@ -99,7 +102,7 @@ function ProductInfos({ item }) {
         </button>
       </div>
       <h3 className="detail-price">
-        Total : {item.price?.original.raw * count}원
+        총 금액 : {item.price?.sale.raw * count}원
       </h3>
       <div
         onClick={() => {
@@ -107,7 +110,7 @@ function ProductInfos({ item }) {
         }}
         className="product-info-action"
       >
-        SHOPPING BAG
+        장바구니에 담기
       </div>
       <div
         onClick={() => {
@@ -115,7 +118,7 @@ function ProductInfos({ item }) {
         }}
         className="product-info-action"
       >
-        BUY NOW
+        바로 구매하기
       </div>
     </>
   );

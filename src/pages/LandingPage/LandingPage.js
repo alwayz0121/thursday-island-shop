@@ -25,6 +25,7 @@ function LandingPage() {
 
     Product.list(options, function (err, result) {
       if (err) {
+        console.log(err.status);
         console.log(err.code);
         console.log(err.message);
         return;
@@ -37,17 +38,13 @@ function LandingPage() {
   const renderCards = items.map((item) => {
     if (item) {
       return (
-        <div key={item._id} className="col-md-4">
+        <div key={item._id} className="grid-product">
           <Link to={`/product/${item._id}`}>
-            <img
-              src={item.thumbnail.url}
-              alt={item.name}
-              style={{
-                width: "90%",
-                boxShadow: "0px 0px 15px #ccc",
-                margin: "0px 0px 20px 20px",
-              }}
-            />
+            <img src={item.thumbnail.url} alt={item.name} />
+            <div className="grid-detail">
+              <p>{item.name}</p>
+              <p>{item.price.sale.formatted}</p>
+            </div>
           </Link>
         </div>
       );
@@ -57,11 +54,31 @@ function LandingPage() {
   return (
     <div className={`start ${fadepage}`}>
       <section className="welcome"></section>
-      <section className="sub-bg"></section>
-      <section className="new-product pageWrapper">
-        <h2 className="main-title">New Product</h2>
+
+      <section className="movie-wrapper">
         <div className="container">
-          <div className="row">{renderCards}</div>
+          <div className="movie-subtitle">2022 Fall</div>
+          <div className="movie-title">Flower Market</div>
+          <div className="movie-player">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/iS65Ttye6Kg"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section className="sub-bg"></section>
+
+      <section className="product-grid">
+        <div className="grid-container">
+          <h2>New Product</h2>
+          <div className="grid">{renderCards}</div>
         </div>
       </section>
     </div>

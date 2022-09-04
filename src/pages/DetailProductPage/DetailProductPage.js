@@ -6,6 +6,7 @@ import { Row, Col } from "react-bootstrap";
 import ProductInfos from "./Sections/ProductInfos";
 
 function DetailProductPage() {
+  //url 파라미터 이용 (App.js에 연결한 :productId)
   const params = useParams();
   const productId = params.productId;
 
