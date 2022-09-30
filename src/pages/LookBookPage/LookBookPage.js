@@ -29,6 +29,11 @@ function LookBookPage() {
   let [loadingDisplay, setLoadingDisplay] = useState(false);
 
   useEffect(() => {
+    const pageTitle = document.getElementsByTagName("title")[0];
+    pageTitle.innerHTML = "T.I Shop | LookBook";
+  }, []);
+
+  useEffect(() => {
     setFadepage("end");
     return () => {
       setFadepage("");

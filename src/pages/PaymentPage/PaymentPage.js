@@ -16,6 +16,11 @@ function PaymentPage() {
   const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
+    const pageTitle = document.getElementsByTagName("title")[0];
+    pageTitle.innerHTML = "T.I Shop | 결제하기";
+  }, []);
+
+  useEffect(() => {
     getCartData();
   }, []);
 

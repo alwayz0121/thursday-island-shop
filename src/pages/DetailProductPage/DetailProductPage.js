@@ -10,8 +10,12 @@ function DetailProductPage() {
   const params = useParams();
   const productId = params.productId;
 
+  useEffect(() => {
+    const pageTitle = document.getElementsByTagName("title")[0];
+    pageTitle.innerHTML = "T.I Shop | 상품 자세히 보기";
+  }, []);
+
   //우리가 받을 정보 item: 객체 형태
-  //이후에 자녀 컴포넌트에서 쓸 예정이므로 props 내려주기
   const [item, setItem] = useState({});
   let [fadepage, setFadepage] = useState("");
 

@@ -15,6 +15,11 @@ function CartPage() {
     customer: localStorage.getItem("accessToken"),
   };
 
+  useEffect(() => {
+    const pageTitle = document.getElementsByTagName("title")[0];
+    pageTitle.innerHTML = "T.I Shop | 장바구니";
+  }, []);
+
   //useEffect로 데이터 가져오기
   useEffect(() => {
     //로그인 된 고객 카트 계산하기 API) https://dev.clayful.io/ko/js/apis/cart/get-for-me

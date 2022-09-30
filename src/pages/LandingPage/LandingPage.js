@@ -10,6 +10,11 @@ function LandingPage() {
   let [fadepage, setFadepage] = useState("");
 
   useEffect(() => {
+    const pageTitle = document.getElementsByTagName("title")[0];
+    pageTitle.innerHTML = "Thursday Island Shop";
+  }, []);
+
+  useEffect(() => {
     setFadepage("end");
     return () => {
       setFadepage("");

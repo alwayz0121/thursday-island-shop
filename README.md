@@ -1,4 +1,4 @@
-## 리액트로 만든 쇼핑몰 (Ver 2.0)
+## 리액트로 만든 쇼핑몰 (Ver 2.1)
 
 [직접 만든 Thursday Island 쇼핑몰 바로가기](https://alwayz0121-react-shop.netlify.app/)<br>
 https://alwayz0121-react-shop.netlify.app/
@@ -6,7 +6,7 @@ https://alwayz0121-react-shop.netlify.app/
 React를 이용한 쇼핑몰 사이트입니다.<br>
 (제가 좋아하는 Thursday Island 브랜드의 쇼핑몰을 재구성했습니다.)
 
-test ID : test@naver.com
+test ID : test@naver.com <br>
 test PW : 12345678
 <br> <br>
 
@@ -38,6 +38,7 @@ test PW : 12345678
 ### Category Page (Top, One Piece, Bottom)
 
 - `filter`를 이용해 카테고리에 따라 분류했습니다.
+- `Context`를 이용해 카테고리별 페이지를 컴포넌트화 했습니다.
 
 ### Detail Page
 
@@ -45,7 +46,7 @@ test PW : 12345678
 
 ### LookBook Page
 
-- `axios` 라이브러리를 이용하여 사진을 외부에서 불러왔습니다.
+- `axios` 라이브러리를 이용하여 서버 데이터를 불러왔습니다.
 
 ### Cart Page
 
@@ -60,22 +61,20 @@ test PW : 12345678
 
 ---
 
-## 🚩 Ver 1.0에서 성장한 점
+## 🚩 Ver 2.0에서 성장한 점
 
-1. API 문서와 친숙해져 데이터를 다루는 점에서 자신감을 갖게 되었다.
+1. 처음 접하는 API에도 도전할 수 있게 되었다. (API 문서 읽기)
 
-2. 리팩토링 과정을 통해 이유 있는 코드 사용을 하려고 노력했다.
-
-3. 깃의 버전관리를 이용해 업데이트 실패에 두려워하지 않았다.
+2. 리팩토링과 컴포넌트화를 통해 코드의 재사용을 하려고 노력했다.
 
 <br>
 
-## 🧭 Ver 2.0에서 나아갈 점
+## 🧭 Ver 2.1에서 나아갈 점
 
 1. CSS - `styled component` 연습해보기
 
-2. category pages - 틀이 같다(거의 동일한 코드). 리팩토링 고민하기
+2. 데이터 로딩 UI 추가하기
 
-3. look book 페이지 - axios를 통해 불러오는 동안 지루하지 않을 로딩 UI 추가하기
+3. 기능 - 최근에 본 항목) 뱃지로 띄우기
 
-4. 최근에 본 항목 - 뱃지로 띄우기
+4. 최적화 시도하기

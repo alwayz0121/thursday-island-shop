@@ -13,6 +13,11 @@ function CategoryPage({ category }) {
   const item_summary = url.pathname.slice(1);
 
   useEffect(() => {
+    const pageTitle = document.getElementsByTagName("title")[0];
+    pageTitle.innerHTML = "T.I Shop | 카테고리";
+  }, []);
+
+  useEffect(() => {
     setFadepage("end");
     return () => {
       setFadepage("");
