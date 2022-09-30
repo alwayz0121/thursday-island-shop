@@ -1,10 +1,19 @@
 ## 리액트로 만든 쇼핑몰 (Ver 2.1)
 
 [직접 만든 Thursday Island 쇼핑몰 바로가기](https://alwayz0121-react-shop.netlify.app/)<br>
-https://alwayz0121-react-shop.netlify.app/
 
-React를 이용한 쇼핑몰 사이트입니다.<br>
-(제가 좋아하는 Thursday Island 브랜드의 쇼핑몰을 재구성했습니다.)
+본 프로젝트는 React와 Clayful API를 활용한 쇼핑몰 Web Application Project 입니다. <br>
+회원가입, 로그인, 카테고리, 장바구니, 상품 구매 등의 페이지로 구성되어 있습니다.<br>
+(Thursday Island 브랜드의 쇼핑몰을 재구성했습니다.) <br>
+
+<br>
+
+```
+Frontend | React, CSS3, Bootstrap, API, axios
+Backend | -
+```
+
+<br>
 
 test ID : test@naver.com <br>
 test PW : 12345678
