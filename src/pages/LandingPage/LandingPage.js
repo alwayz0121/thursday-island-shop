@@ -30,7 +30,6 @@ function LandingPage() {
         console.log(err.message);
         return;
       }
-      console.log(result.data);
       setItems(result.data);
     });
   }, []);
@@ -65,9 +64,9 @@ function LandingPage() {
               height="315"
               src="https://www.youtube.com/embed/iS65Ttye6Kg"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </div>

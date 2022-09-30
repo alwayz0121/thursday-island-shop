@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import clayful from "clayful/client-js";
 
-import "../LandingPage/LandingPage.css";
+import "../../LandingPage/LandingPage.css";
 import { Link, useLocation } from "react-router-dom";
 
-function TopPage() {
+function CategoryPage({ category }) {
   const Product = clayful.Product;
   const [items, setItems] = useState([]);
   let [fadepage, setFadepage] = useState("");
@@ -33,7 +33,6 @@ function TopPage() {
         console.log(err.message);
         return;
       }
-      console.log(result.data);
       setItems(result.data);
     });
   }, []);
@@ -57,11 +56,11 @@ function TopPage() {
 
   return (
     <div className={`start ${fadepage}`}>
-      <section className="welcome welcome-top"></section>
+      <section className="welcome welcome-bottom"></section>
 
       <section className="product-grid">
         <div className="grid-container">
-          <h2>Top</h2>
+          <h2>{category}</h2>
           <div className="grid">{renderCards}</div>
         </div>
       </section>
@@ -69,4 +68,4 @@ function TopPage() {
   );
 }
 
-export default TopPage;
+export default CategoryPage;

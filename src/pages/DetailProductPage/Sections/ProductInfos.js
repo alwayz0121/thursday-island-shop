@@ -7,7 +7,6 @@ import { AuthContext } from "./../../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 function ProductInfos({ item }) {
-  console.log(item);
   const navigate = useNavigate();
   const [count, setCount] = useState(1);
   const [shopAlert, setShopAlert] = useState(false);
