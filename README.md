@@ -25,7 +25,8 @@ test PW : 12345678
 
 ### Global
 
-- CSS로 컴포넌트 스타일을 적용했습니다.
+- CSS로 컴포넌트 스타일을 적용했습니다.<br>
+  <b>(현재 branch - styled-components 에서 styled-components로 업데이트 진행 중입니다.)</b>
 - 페이지별로 폴더를 나눠서 작업했습니다.
 
 ### Header, Footer
@@ -80,7 +81,8 @@ test PW : 12345678
 
 ## 🧭 Ver 2.1에서 나아갈 점
 
-1. CSS - `styled component` 연습해보기
+1. CSS - `styled component` 연습해보기<br>
+   <b>(현재 branch - styled-components 에서 styled-components로 업데이트 진행 중입니다.)</b>
 
 2. 데이터 로딩 UI 추가하기
 
