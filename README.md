@@ -1,4 +1,4 @@
-## 🛒 리액트 쇼핑몰 (Ver 2.1)
+## 🛒 리액트 쇼핑몰 (Ver 2.2)
 
 [직접 만든 Thursday Island 쇼핑몰 바로가기](https://alwayz0121-react-shop.netlify.app/)<br>
 
@@ -9,7 +9,7 @@
 <br>
 
 ```
-Frontend | React, CSS3, Bootstrap, API, axios
+Frontend | React, styled-components, Bootstrap, API
 Backend | -
 ```
 
@@ -25,7 +25,7 @@ test PW : 12345678
 
 ### Global
 
-- CSS로 컴포넌트 스타일을 적용했습니다.
+- `styled components`로 컴포넌트 스타일을 적용했습니다.
 - 페이지별로 폴더를 나눠서 작업했습니다.
 
 ### Header, Footer
@@ -70,17 +70,19 @@ test PW : 12345678
 
 ---
 
-## 🚩 Ver 2.0에서 성장한 점
+## 🚩 Ver 2.1에서 성장한 점
 
-1. 처음 접하는 API에도 도전할 수 있게 되었다. (API 문서 읽기)
+1. 순수 CSS에서 `styled components`로 재구현
 
 2. 리팩토링과 컴포넌트화를 통해 코드의 재사용을 하려고 노력했다.
+
+3. GIT을 활용해 버전 관리를 진행했다. (branch를 이용해 styled components 적용)
 
 <br>
 
 ## 🧭 Ver 2.1에서 나아갈 점
 
-1. CSS - `styled component` 연습해보기
+1. 상태 관리 - context API에서 Redux로 연습해보기
 
 2. 데이터 로딩 UI 추가하기
 
