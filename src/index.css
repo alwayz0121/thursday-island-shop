@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/*global로 적용해야 함! (LookBookPage 수정 필요)*/
 .pageWrapper {
   padding: 5rem 3rem 3rem;
   max-width: 1200px;

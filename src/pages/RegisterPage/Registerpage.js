@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 
 //사용자 정보를 받기 위한 외부 라이브러리 사용
