@@ -35,7 +35,9 @@ const SectionTitle = styled.h5`
   font-size: 18px;
 `;
 
-const TextInput = styled.input`
+const TextInput = styled.input.attrs({
+  type: "text",
+})`
   color: #444;
   box-sizing: border-box;
   border: 1px solid #ddd;
@@ -67,6 +69,7 @@ const PaymentBtn = styled.button`
   border: 1px solid #444;
   background-color: #444;
   color: #fff;
+  width: 100%;
 `;
 
 function PaymentPage() {
@@ -152,14 +155,12 @@ function PaymentPage() {
         <PaymentSection>
           <SectionTitle>주문자 정보</SectionTitle>
           <TextInput
-            type="text"
             name="name"
             onChange={handleSendChange}
             value={sendUserInfo.name}
             placeholder="주문하시는 분"
           />
           <TextInput
-            type="text"
             name="mobile"
             onChange={handleSendChange}
             value={sendUserInfo.mobile}
@@ -182,14 +183,12 @@ function PaymentPage() {
         <PaymentSection>
           <SectionTitle>배송지 정보</SectionTitle>
           <TextInput
-            type="text"
             name="name"
             onChange={handleGetChange}
             value={getUserInfo.name}
             placeholder="받는 분"
           />
           <TextInput
-            type="text"
             name="mobile"
             onChange={handleGetChange}
             value={getUserInfo.mobile}
@@ -197,9 +196,9 @@ function PaymentPage() {
           />
 
           <SectionTitle>배송 주소</SectionTitle>
-          <TextInput type="text" placeholder="주소" />
-          <TextInput type="text" placeholder="상세주소" />
-          <TextInput type="text" placeholder="우편번호" />
+          <TextInput placeholder="주소" />
+          <TextInput placeholder="상세주소" />
+          <TextInput placeholder="우편번호" />
 
           <SectionTitle>결제</SectionTitle>
           <SelectInput>
@@ -208,7 +207,7 @@ function PaymentPage() {
             <option>무통장입금</option>
           </SelectInput>
 
-          <PaymentBtn style={{ width: "100%" }}>주문</PaymentBtn>
+          <PaymentBtn>주문</PaymentBtn>
         </PaymentSection>
       </PaymentWrapper>
     </div>

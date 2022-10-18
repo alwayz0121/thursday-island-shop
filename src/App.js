@@ -1,7 +1,7 @@
 import React from "react";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import RegisterPage from "./pages/RegisterPage/Registerpage";
 import { Routes, Route } from "react-router-dom";
 
 import GlobalStyle from "./globalStyle";

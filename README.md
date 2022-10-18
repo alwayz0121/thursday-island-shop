@@ -25,7 +25,7 @@ test PW : 12345678
 
 ### Global
 
-- `styled components`로 컴포넌트 스타일을 적용했습니다.
+- `styled components`로 컴포넌트 스타일을 적용하는 중입니다.
 - 페이지별로 폴더를 나눠서 작업했습니다.
 
 ### Header, Footer
@@ -74,9 +74,9 @@ test PW : 12345678
 
 1. 순수 CSS에서 `styled components`로 재구현
 
-2. 리팩토링과 컴포넌트화를 통해 코드의 재사용을 하려고 노력했다.
+2. 리팩토링과 컴포넌트화를 통해 코드의 재사용을 하려고 노력
 
-3. GIT을 활용해 버전 관리를 진행했다. (branch를 이용해 styled components 적용)
+3. GIT을 활용해 버전 관리 연습 (branch를 이용해 styled components 적용)
 
 <br>
 
