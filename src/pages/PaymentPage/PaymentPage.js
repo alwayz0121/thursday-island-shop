@@ -1,76 +1,6 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
 import clayful from "clayful/client-js";
-
-const Header = styled.div`
-  width: 100%;
-  display: flex;
-  border-bottom: 1px solid #ddd;
-  padding: 20px 0px;
-`;
-
-const Title = styled.h2`
-  width: 50%;
-  font-size: 24px;
-  font-weight: 500;
-`;
-
-const FinalPrice = styled.div`
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-`;
-
-const PaymentWrapper = styled.section`
-  display: flex;
-  width: 100%;
-`;
-
-const PaymentSection = styled.article`
-  width: 49%;
-`;
-
-const SectionTitle = styled.h5`
-  margin-top: 20px;
-  font-size: 18px;
-`;
-
-const TextInput = styled.input.attrs({
-  type: "text",
-})`
-  color: #444;
-  box-sizing: border-box;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 1rem;
-  margin-bottom: 0.8rem;
-  width: 100%;
-  max-width: 400px;
-`;
-
-const CheckboxInput = styled.input``;
-
-const SelectInput = styled.input`
-  color: #444;
-  width: 100%;
-  max-width: 400px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 0.5rem;
-`;
-
-const PaymentBtn = styled.button`
-  display: block;
-  margin-top: 20px;
-  padding: 10px 0px 30px;
-  height: 2rem;
-  max-width: 400px;
-  border-radius: 5px;
-  border: 1px solid #444;
-  background-color: #444;
-  color: #fff;
-  width: 100%;
-`;
+import "./PaymentPage.css";
 
 function PaymentPage() {
   const [cart, setCart] = useState({});
@@ -146,28 +76,32 @@ function PaymentPage() {
 
   return (
     <div className="pageWrapper">
-      <Header>
-        <Title>결제</Title>
-        <FinalPrice>최종 결제 금액: {cart.total?.amount.raw}원</FinalPrice>
-      </Header>
+      <div className="payment-header">
+        <div className="payment-title">결제</div>
+        <div className="payment-price">
+          최종 결제 금액: {cart.total?.amount.raw}원
+        </div>
+      </div>
 
-      <PaymentWrapper>
-        <PaymentSection>
-          <SectionTitle>주문자 정보</SectionTitle>
-          <TextInput
+      <div className="payment">
+        <div className="payment-order-info" style={{ width: "49%" }}>
+          <h5>주문자 정보</h5>
+          <input
+            type="text"
             name="name"
             onChange={handleSendChange}
             value={sendUserInfo.name}
             placeholder="주문하시는 분"
           />
-          <TextInput
+          <input
+            type="text"
             name="mobile"
             onChange={handleSendChange}
             value={sendUserInfo.mobile}
             placeholder="휴대폰 연락처"
           />
           <div>
-            <CheckboxInput
+            <input
               type="checkbox"
               id="sameInfo"
               name="sameInfo"
@@ -176,40 +110,42 @@ function PaymentPage() {
             />
             <label htmlFor="sameInfo">배송지 정보도 동일합니다.</label>
           </div>
-        </PaymentSection>
+        </div>
 
         <div style={{ width: "2%" }}></div>
 
-        <PaymentSection>
-          <SectionTitle>배송지 정보</SectionTitle>
-          <TextInput
+        <div className="payment-getter-info" style={{ width: "49%" }}>
+          <h5>배송지 정보</h5>
+          <input
+            type="text"
             name="name"
             onChange={handleGetChange}
             value={getUserInfo.name}
             placeholder="받는 분"
           />
-          <TextInput
+          <input
+            type="text"
             name="mobile"
             onChange={handleGetChange}
             value={getUserInfo.mobile}
             placeholder="휴대폰 연락처"
           />
 
-          <SectionTitle>배송 주소</SectionTitle>
-          <TextInput placeholder="주소" />
-          <TextInput placeholder="상세주소" />
-          <TextInput placeholder="우편번호" />
+          <h5>배송 주소</h5>
+          <input type="text" placeholder="주소" />
+          <input type="text" placeholder="상세주소" />
+          <input type="text" placeholder="우편번호" />
 
-          <SectionTitle>결제</SectionTitle>
-          <SelectInput>
+          <h5>결제</h5>
+          <select>
             <option>옵션</option>
             <option>신용카드</option>
             <option>무통장입금</option>
-          </SelectInput>
+          </select>
 
-          <PaymentBtn>주문</PaymentBtn>
-        </PaymentSection>
-      </PaymentWrapper>
+          <button style={{ width: "100%" }}>주문</button>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,59 @@
+.payment-header {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0px;
+}
+
+.payment-header .payment-title {
+  width: 50%;
+  font-size: 24px;
+  font-weight: 500;
+}
+.payment-header .payment-price {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.payment {
+  display: flex;
+  width: 100%;
+}
+
+.payment h5 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.payment input[type="text"] {
+  color: #444;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.payment select {
+  color: #444;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+.payment button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 0px 30px;
+  height: 2rem;
+  max-width: 400px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #444;
+  color: #fff;
+}
